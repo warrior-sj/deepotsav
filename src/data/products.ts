@@ -29,6 +29,8 @@ export const products:Product[]=[
 {id:"fuljhadibig",name:"Big Fuljhadi · 50 cm",category:"Sparklers",desc:"5 pieces per box.",unit:"Per box · 5 pcs",options:[{id:"fulbig-box",cost:590}]}
 ];
 export const categories=["All",...Array.from(new Set(products.map(p=>p.category)))];
-export const listPrice=(cost:number)=>cost;
-export const finalPrice=(cost:number)=>Math.round(cost*.9);
+// Stored costs are the 30%-hiked catalogue prices. Recover the WhatsApp base price,
+// then apply the site's 10% offer to that recovered price.
+export const listPrice=(cost:number)=>Math.round(cost/1.3);
+export const finalPrice=(cost:number)=>Math.round(listPrice(cost)*.9);
 export const money=(n:number)=>new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(n);
