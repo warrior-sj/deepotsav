@@ -1,34 +1,33 @@
 export type Option={id:string;cost:number;label?:string};
 export type Product={id:string;name:string;category:string;desc:string;options:Option[];unit?:string};
+// cost stores the base price. The catalogue shows a 60% markup, then applies a 10% offer.
 export const products:Product[]=[
-{id:"penta",name:"Penta Sky Shot",category:"Sky Effects",desc:"Choose from three available price options.",options:[{id:"penta-330",cost:330,label:"Option 1"},{id:"penta-400",cost:400,label:"Option 2"},{id:"penta-600",cost:600,label:"Option 3"}]},
-{id:"12shot",name:"12 Shot",category:"Sky Effects",desc:"Twelve-shot aerial selection.",options:[{id:"12-390",cost:390,label:"Option 1"},{id:"12-450",cost:450,label:"Option 2"},{id:"12-500",cost:500,label:"Option 3"}]},
-{id:"30shot",name:"30 Shot",category:"Sky Effects",desc:"Thirty-shot aerial selection.",options:[{id:"30-800",cost:800,label:"Option 1"},{id:"30-1000",cost:1000,label:"Option 2"}]},
-{id:"smallbullet",name:"Small Bullet",category:"Aerial & Sound",desc:"10 pieces per box.",unit:"Per box · 10 pcs",options:[{id:"smallbullet-box",cost:100}]},
-{id:"bigbullet",name:"Big Bullet",category:"Aerial & Sound",desc:"10 pieces per box.",unit:"Per box · 10 pcs",options:[{id:"bigbullet-box",cost:200}]},
-{id:"naazi",name:"Naazi",category:"Ground Effects",desc:"10 pieces per box.",unit:"Per box · 10 pcs",options:[{id:"naazi-box",cost:360}]},
-{id:"bigraavan",name:"Big Size Raavan",category:"Ground Effects",desc:"10 pieces per box.",unit:"Per box · 10 pcs",options:[{id:"bigraavan-box",cost:200}]},
-{id:"chotaraavan",name:"100 Pc Chota Raavan",category:"Ground Effects",desc:"Pack of 100 pieces.",unit:"100 pcs",options:[{id:"chotaraavan-100",cost:700}]},
-{id:"commando",name:"Commando",category:"Aerial & Sound",desc:"10 pieces per box.",unit:"Per box · 10 pcs",options:[{id:"commando-box",cost:290}]},
-{id:"dynamite",name:"Dynamite",category:"Aerial & Sound",desc:"10 pieces per box.",unit:"Per box · 10 pcs",options:[{id:"dynamite-box",cost:260}]},
-{id:"hydrosmall",name:"Hydro Small",category:"Ground Effects",desc:"10 pieces per box.",unit:"Per box · 10 pcs",options:[{id:"hydrosmall-box",cost:170}]},
-{id:"hydrofoil",name:"Hydro Small Foil",category:"Ground Effects",desc:"10 pieces per box.",unit:"Per box · 10 pcs",options:[{id:"hydrofoil-box",cost:200}]},
-{id:"anaarchota",name:"Anaar Chota",category:"Fountains",desc:"10 pieces per box; two price options.",unit:"Per box · 10 pcs",options:[{id:"anaarchota-240",cost:240,label:"Option 1"},{id:"anaarchota-370",cost:370,label:"Option 2"}]},
-{id:"anaarmedium",name:"Medium Anaar",category:"Fountains",desc:"10 pieces per box.",unit:"Per box · 10 pcs",options:[{id:"anaarmedium-box",cost:520}]},
-{id:"matkasmall",name:"Small Matka Anaar",category:"Fountains",desc:"10 pieces per box.",unit:"Per box · 10 pcs",options:[{id:"matkasmall-box",cost:1040}]},
-{id:"matkabig",name:"Big Matka Anaar",category:"Fountains",desc:"4 pieces per box.",unit:"Per box · 4 pcs",options:[{id:"matkabig-box",cost:1400}]},
-{id:"rocket",name:"Normal Rocket",category:"Sky Effects",desc:"10 pieces per box.",unit:"Per box · 10 pcs",options:[{id:"rocket-box",cost:200}]},
-{id:"2soundrocket",name:"2 Sound Rocket",category:"Sky Effects",desc:"10 pieces per box; two price options.",unit:"Per box · 10 pcs",options:[{id:"2sound-350",cost:350,label:"Option 1"},{id:"2sound-390",cost:390,label:"Option 2"}]},
-{id:"whistlingrocket",name:"Whistling Rocket",category:"Sky Effects",desc:"10 pieces per box.",unit:"Per box · 10 pcs",options:[{id:"whistling-box",cost:850}]},
-{id:"murgachaap50",name:"Murga Chaap",category:"Aerial & Sound",desc:"Pack of 50 pieces.",unit:"50 pcs",options:[{id:"murga-50",cost:1300}]},
-{id:"murgachaap25",name:"Murga Chaap",category:"Aerial & Sound",desc:"Pack of 25 pieces.",unit:"25 pcs",options:[{id:"murga-25",cost:700}]},
-{id:"bijli",name:"Bijli",category:"Aerial & Sound",desc:"One packet; choose a price option.",unit:"Per packet",options:[{id:"bijli-100",cost:100,label:"Option 1"},{id:"bijli-130",cost:130,label:"Option 2"},{id:"bijli-250",cost:250,label:"Option 3"}]},
-{id:"ladi1000",name:"1000 Ki Ladi",category:"Aerial & Sound",desc:"Choose from two available price options.",options:[{id:"ladi-590",cost:590,label:"Option 1"},{id:"ladi-980",cost:980,label:"Option 2"}]},
+{id:"penta",name:"Penta Sky Shot",category:"Sky Effects",desc:"Aerial effect.",options:[{id:"penta",cost:250}]},
+{id:"anaarchota",name:"Anaar Chota",category:"Fountains",desc:"Ground fountain effect.",options:[{id:"anaarchota",cost:180}]},
+{id:"bullet",name:"Bullet",category:"Aerial & Sound",desc:"Per box.",unit:"Per box",options:[{id:"bullet",cost:115}]},
+{id:"fuljhadi",name:"Fuljhadi",category:"Sparklers",desc:"Pack of 5 boxes.",unit:"5 boxes",options:[{id:"fuljhadi-5",cost:450}]},
+{id:"naazi",name:"Naazi",category:"Ground Effects",desc:"Available in two price options.",unit:"Per box",options:[{id:"naazi-270",cost:270,label:"Option 1"},{id:"naazi-250",cost:250,label:"Option 2"}]},
+{id:"raavan",name:"Raavan",category:"Ground Effects",desc:"Ground effect.",options:[{id:"raavan",cost:150}]},
+{id:"chotaraavan",name:"100 Pc Chota Raavan",category:"Ground Effects",desc:"Pack of 100 pieces.",unit:"100 pcs",options:[{id:"chotaraavan",cost:500}]},
+{id:"badaanaar",name:"Bada Anaar",category:"Fountains",desc:"Large fountain effect.",options:[{id:"badaanaar",cost:400}]},
+{id:"12shot",name:"12 Shot",category:"Sky Effects",desc:"12-shot aerial selection.",options:[{id:"12shot",cost:300}]},
+{id:"commando",name:"Commando",category:"Aerial & Sound",desc:"Per box.",unit:"Per box",options:[{id:"commando",cost:220}]},
+{id:"chakri",name:"Chakri",category:"Ground Effects",desc:"Spinning ground effect.",options:[{id:"chakri",cost:300}]},
+{id:"badabullet",name:"Bada Bullet",category:"Aerial & Sound",desc:"Per box.",unit:"Per box",options:[{id:"badabullet",cost:150}]},
+{id:"rocket",name:"Rocket",category:"Sky Effects",desc:"Price per box.",unit:"Per box",options:[{id:"rocket",cost:150}]},
+{id:"2sound",name:"2 Sound",category:"Aerial & Sound",desc:"Sound effect.",options:[{id:"2sound",cost:250}]},
+{id:"verybigfuljhadi",name:"Very Big Fuljhadi",category:"Sparklers",desc:"Price per box.",unit:"Per box",options:[{id:"verybigfuljhadi",cost:450}]},
+{id:"cornationchakri",name:"Cornation Chakri",category:"Ground Effects",desc:"Price per box.",unit:"Per box",options:[{id:"cornationchakri",cost:200}]},
+{id:"2soundrocket",name:"2 Sound Rocket",category:"Sky Effects",desc:"Aerial rocket selection.",options:[{id:"2soundrocket",cost:300}]},
+{id:"whistlingrocket",name:"Whistling Rocket",category:"Sky Effects",desc:"Aerial rocket selection.",options:[{id:"whistlingrocket",cost:650}]},
+{id:"bijli",name:"Bijli",category:"Aerial & Sound",desc:"Available in three price options.",options:[{id:"bijli-100",cost:100,label:"Option 1"},{id:"bijli-180",cost:180,label:"Option 2"},{id:"bijli-60",cost:60,label:"Option 3"}]},
+{id:"ladi1000",name:"1000 Ki Ladi",category:"Aerial & Sound",desc:"Available in two price options.",options:[{id:"ladi-450",cost:450,label:"Option 1"},{id:"ladi-750",cost:750,label:"Option 2"}]},
+{id:"matkaanaar",name:"Matka Anaar",category:"Fountains",desc:"Matka-style fountain.",options:[{id:"matkaanaar",cost:800}]},
 {id:"fuljhadi20",name:"Fuljhadi · 20 cm",category:"Sparklers",desc:"10 pieces per box.",unit:"Per box · 10 pcs",options:[{id:"ful20-box",cost:370}]},
 {id:"fuljhadi10",name:"Fuljhadi · 10 cm",category:"Sparklers",desc:"Listed as 5 boxes; 10 pieces per box.",unit:"5 boxes · 10 pcs/box",options:[{id:"ful10-5boxes",cost:590}]},
-{id:"fuljhadibig",name:"Big Fuljhadi · 50 cm",category:"Sparklers",desc:"5 pieces per box.",unit:"Per box · 5 pcs",options:[{id:"fulbig-box",cost:590}]}
+{id:"jurassicclassic",name:"Jurassic Classic",category:"Special Collection",desc:"Classic selection.",options:[{id:"jurassicclassic",cost:280}]}
 ];
 export const categories=["All",...Array.from(new Set(products.map(p=>p.category)))];
-export const listPrice=(cost:number)=>cost;
-export const finalPrice=(cost:number)=>Math.round(cost*.9);
+export const listPrice=(cost:number)=>Math.round(cost*1.6);
+export const finalPrice=(cost:number)=>Math.round(listPrice(cost)*.9);
 export const money=(n:number)=>new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(n);
